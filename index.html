@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RA - Heartleaf Philodendron</title>
+    <script
+      type="module"
+      src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"
+    ></script>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="container">
+      <header>
+        <h1>Heartleaf Philodendron em Realidade Aumentada</h1>
+        <p>
+          Toque no botão <strong>Ver em RA</strong> para posicionar o vaso no ambiente usando
+          WebXR (Android), Scene Viewer (Android) ou Quick Look (iOS).
+        </p>
+      </header>
+
+      <section class="ar-card" aria-label="Visualizador em realidade aumentada">
+        <model-viewer
+          src="assets/heartleaf-philodendron.glb"
+          ios-src="assets/heartleaf-philodendron.usdz"
+          alt="Heartleaf Philodendron em vaso preto"
+          ar
+          ar-modes="webxr scene-viewer quick-look"
+          ar-scale="auto"
+          camera-controls
+          touch-action="pan-y"
+          shadow-intensity="1"
+          environment-image="neutral"
+          exposure="1"
+          auto-rotate
+        >
+          <button slot="ar-button" class="ar-button">Ver em RA</button>
+        </model-viewer>
+      </section>
+
+      <section class="notes">
+        <h2>Modelo de referência (Sketchfab)</h2>
+        <div class="sketchfab-embed-wrapper">
+          <iframe
+            title="Heartleaf Philodendron in a black pot"
+            frameborder="0"
+            allowfullscreen
+            mozallowfullscreen="true"
+            webkitallowfullscreen="true"
+            allow="autoplay; fullscreen; xr-spatial-tracking"
+            xr-spatial-tracking
+            execution-while-out-of-viewport
+            execution-while-not-rendered
+            web-share
+            src="https://sketchfab.com/models/d256c4ea95444bd6b37ed9b131e759ac/embed"
+          ></iframe>
+        </div>
+      </section>
+    </main>
+  </body>
+</html>
