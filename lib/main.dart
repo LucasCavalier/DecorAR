@@ -56,6 +56,17 @@ class _MainShellState extends State<MainShell> {
         child: NavigationBar(
           backgroundColor: Colors.transparent,
           indicatorColor: const Color(0xFF3A5DB0).withValues(alpha: 0.45),
+          labelTextStyle: WidgetStateProperty.resolveWith<TextStyle>(
+            (states) => const TextStyle(
+              color: Colors.white,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+          iconTheme: WidgetStateProperty.resolveWith<IconThemeData>(
+            (states) => const IconThemeData(
+              color: Colors.white,
+            ),
+          ),
           selectedIndex: _index,
           onDestinationSelected: (value) => setState(() => _index = value),
           destinations: const [
