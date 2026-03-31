@@ -1,56 +1,40 @@
-# TESTE_RA
+# DecorAR (Flutter)
 
-Página web simples para visualizar o modelo **Heartleaf Philodendron** em 3D e abrir em **Realidade Aumentada (RA)**.
+Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de interiores inspirado na referência enviada.
 
-## O que foi criado
+> Nesta etapa foi implementada somente a interface (UI). A integração de Realidade Aumentada ainda não foi adicionada.
 
-- Visualizador 3D com [`<model-viewer>`](https://modelviewer.dev/)
-- Botão **Ver em RA** com suporte a:
-  - **WebXR** (navegadores compatíveis)
-  - **Scene Viewer** (Android)
-  - **Quick Look** (iOS, usando `.usdz`)
-- Embed do Sketchfab como referência.
+## Telas implementadas
 
-## Estrutura
+- Tela inicial com hero, chamada principal e CTAs
+- Tela de modelos (grid de itens)
+- Tela sobre (texto institucional)
+- Card de detalhe com botão "Visualizar"
+- Navegação inferior entre as 3 áreas principais
+
+## Como executar
+
+1. Instale o Flutter SDK.
+2. Na raiz do projeto, execute:
+
+```bash
+flutter pub get
+flutter run
+```
+
+## Estrutura principal
 
 ```text
 .
-├── index.html
-├── styles.css
-└── assets/
-    ├── heartleaf-philodendron.glb   # adicione seu arquivo aqui
-    └── heartleaf-philodendron.usdz  # opcional (iOS Quick Look)
+├── lib/
+│   └── main.dart
+├── pubspec.yaml
+└── analysis_options.yaml
 ```
 
-## Como usar
+## Próximos passos sugeridos
 
-1. Crie a pasta de assets e coloque o arquivo `.glb`:
-
-   ```bash
-   mkdir -p assets
-   # copie seu arquivo .glb para:
-   # assets/heartleaf-philodendron.glb
-   ```
-
-2. (Opcional) gere/adicione um `.usdz` para melhorar suporte no iOS:
-
-   ```text
-   assets/heartleaf-philodendron.usdz
-   ```
-
-3. Rode um servidor local:
-
-   ```bash
-   python3 -m http.server 8080
-   ```
-
-4. Abra:
-
-   ```text
-   http://localhost:8080
-   ```
-
-## Observações
-
-- Se o botão de RA não aparecer, o dispositivo/navegador pode não oferecer suporte.
-- Em iOS, o fluxo de RA normalmente depende do arquivo `.usdz`.
+- Integrar visualização 3D real (ex.: SceneView/model-viewer via plataforma)
+- Integrar recurso de ARKit/ARCore por plugin Flutter
+- Substituir ícones por imagens/modelos reais do catálogo
+- Conectar backend para listar objetos e ambientes
