@@ -1,4 +1,4 @@
-# DecorAR (Flutter)
+# Aplicativo DecorAR (Flutter)
 
 Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de interiores inspirado na referência enviada.
 
@@ -12,7 +12,7 @@ Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de int
 - Card de detalhe com botão "Visualizar"
 - Navegação inferior entre as 3 áreas principais
 
-## Como executar
+## Como executar o projeto:
 
 1. Instale o Flutter SDK.
 2. Na raiz do projeto, execute:
@@ -32,7 +32,7 @@ flutter run
 └── analysis_options.yaml
 ```
 
-## Próximos passos sugeridos
+## Próximos passos (sugestões):
 
 - Integrar visualização 3D real (ex.: SceneView/model-viewer via plataforma)
 - Integrar recurso de ARKit/ARCore por plugin Flutter
