@@ -253,13 +253,13 @@ class AboutScreen extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(12),
             child: Text(
-              'A DecorAR é uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '\
-              'Nosso objetivo é transformar a forma como as pessoas planejam e visualizam seus ambientes, permitindo '\
+              'A DecorAR é uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '
+              'Nosso objetivo é transformar a forma como as pessoas planejam e visualizam seus ambientes, permitindo '
               'que clientes vejam, em tempo real, móveis, cores e elementos decorativos no próprio espaço.\n\n'
-              'Combinando tecnologia e criatividade, a DecorAR oferece uma experiência moderna e interativa. Nesta primeira '\
-              'versão do aplicativo, estamos focados na construção de uma interface elegante e intuitiva, pronta para receber '\
+              'Combinando tecnologia e criatividade, a DecorAR oferece uma experiência moderna e interativa. Nesta primeira '
+              'versão do aplicativo, estamos focados na construção de uma interface elegante e intuitiva, pronta para receber '
               'a integração de RA nas próximas etapas do projeto.\n\n'
-              'Nossa equipe acredita que cada ambiente deve refletir personalidade e conforto. Por isso, criamos um fluxo simples '\
+              'Nossa equipe acredita que cada ambiente deve refletir personalidade e conforto. Por isso, criamos um fluxo simples '
               'para explorar modelos, conhecer inspirações e iniciar a jornada de decoração com praticidade e confiança.',
               style: TextStyle(
                 color: Color(0xFFDCE9FF),
