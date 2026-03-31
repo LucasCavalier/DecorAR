@@ -62,11 +62,6 @@ class _MainShellState extends State<MainShell> {
               fontWeight: FontWeight.w700,
             ),
           ),
-          iconTheme: WidgetStateProperty.resolveWith<IconThemeData>(
-            (states) => const IconThemeData(
-              color: Colors.white,
-            ),
-          ),
           selectedIndex: _index,
           onDestinationSelected: (value) => setState(() => _index = value),
           destinations: const [
