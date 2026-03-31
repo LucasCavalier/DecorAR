@@ -22,6 +22,14 @@ flutter pub get
 flutter run
 ```
 
+### Execução no VS Code
+
+Também foi adicionada a configuração de debug em `.vscode/launch.json` com os perfis:
+
+- `TESTE_RA (Flutter Chrome)`
+- `TESTE_RA (Flutter Android)`
+- `TESTE_RA (Flutter iOS)`
+
 ## Estrutura principal
 
 ```text
