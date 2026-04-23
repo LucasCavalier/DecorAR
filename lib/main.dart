@@ -285,6 +285,61 @@ class ModelsScreen extends StatelessWidget {
   }
 }
 
+class ProjectScreen extends StatelessWidget {
+  const ProjectScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35), // fundo azul escuro
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back),
+          onPressed: () {
+            Navigator.pop(context); // volta para a página anterior (ModelsScreen)
+          },
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                      begin: Alignment.topCenter,
+                      end: Alignment.bottomCenter,
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
+                  ),
+                ),
+                const SizedBox(height: 14),
+                _actionButton('Projetar'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
 class AboutScreen extends StatelessWidget {
   const AboutScreen({super.key});
 
@@ -329,54 +384,6 @@ class AboutScreen extends StatelessWidget {
     );
   }
 }
-
-class ProjectScreen extends StatelessWidget {
-  const ProjectScreen({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return ListView(
-      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
-      children: [
-        const Center(
-          child: Text(
-            'Projetar Modelo',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 30,
-              fontWeight: FontWeight.w700,
-            ),
-          ),
-        ),
-        const SizedBox(height: 16),
-        _card(
-          child: Column(
-            children: [
-              const SizedBox(height: 8),
-              Container(
-                height: 220,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
-                ),
-                child: const Center(
-                  child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
-                ),
-              ),
-              const SizedBox(height: 14),
-              _actionButton('Projetar'),
-            ],
-          ),
-        ),
-      ],
-    );
-  }
-}
-
 
 class _Bullet extends StatelessWidget {
   final String text;
