@@ -51,13 +51,13 @@ class _MainShellState extends State<MainShell> {
         ),
         child: NavigationBar(
           backgroundColor: Colors.transparent,
-          indicatorColor: const Color.fromARGB(255, 83, 128, 235).withOpacity(0.4),
+          indicatorColor: const Color.fromARGB(255, 83, 128, 235).withOpacity(0.8),
           selectedIndex: _index,
           onDestinationSelected: (value) => setState(() => _index = value),
           destinations: const [
             NavigationDestination(icon: Icon(Icons.weekend), label: 'Modelos'),
             NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
-            NavigationDestination(icon: Icon(Icons.info), label: 'Sobre'),
+            NavigationDestination(icon: Icon(Icons.info), label: 'Sobe'),
           ],
         ),
       ),
