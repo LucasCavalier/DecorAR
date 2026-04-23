@@ -321,23 +321,6 @@ class AboutScreen extends StatelessWidget {
                   fontSize: 36,
                 ),
               ),
-              const SizedBox(height: 8),
-              Container(
-                height: 220,
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(18),
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
-                    begin: Alignment.topCenter,
-                    end: Alignment.bottomCenter,
-                  ),
-                ),
-                child: const Center(
-                  child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
-                ),
-              ),
-              const SizedBox(height: 14),
-              _actionButton('Projetar'),
             ],
           ),
         ),
@@ -364,22 +347,28 @@ class ProjectScreen extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 18),
+        const SizedBox(height: 16),
         _card(
-          child: const Padding(
-            padding: EdgeInsets.all(12),
-            child: Text(
-              'Aqui você pode visualizar e gerenciar seus projetos de decoração. '
-              'Explore ideias, salve inspirações e acompanhe o progresso das suas criações.\n\n'
-              'Nos próximos passos, será possível integrar modelos em RA diretamente nos ambientes, '
-              'permitindo uma experiência ainda mais imersiva e prática.',
-              style: TextStyle(
-                color: Color(0xFFDCE9FF),
-                height: 1.5,
-                fontSize: 17,
-                fontWeight: FontWeight.w400,
+          child: Column(
+            children: [
+              const SizedBox(height: 8),
+              Container(
+                height: 220,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(18),
+                  gradient: const LinearGradient(
+                    colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    begin: Alignment.topCenter,
+                    end: Alignment.bottomCenter,
+                  ),
+                ),
+                child: const Center(
+                  child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
+                ),
               ),
-            ),
+              const SizedBox(height: 14),
+              _actionButton('Projetar'),
+            ],
           ),
         ),
       ],
