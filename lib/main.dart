@@ -157,7 +157,7 @@ class HomeScreen extends StatelessWidget {
                 _Bullet('Decore'),
                 _Bullet('A realidade aumentada é isso e muito mais'),
               ],
-              const SizedBox(height: 20),
+              const SizedBox(height: 14),
               const Text(
                 'A DecorAR é uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '
                 'Nosso objetivo é transformar a forma como as pessoas planejam e visualizam seus ambientes, permitindo '
