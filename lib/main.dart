@@ -51,7 +51,7 @@ class _MainShellState extends State<MainShell> {
         ),
         child: NavigationBar(
           backgroundColor: Colors.transparent,
-          indicatorColor: const Color(0xFF3A5DB0).withOpacity(0.45),
+          indicatorColor: const Color(0xFF3A5DB0).withOpacity(0.60),
           selectedIndex: _index,
           onDestinationSelected: (value) => setState(() => _index = value),
           destinations: const [
@@ -135,9 +135,11 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 24),
               ...const [
-                _Bullet('visualize'),
-                _Bullet('experimente'),
-                _Bullet('decore com realidade aumentada'),
+                _Bullet('Visualize'),
+                _Bullet('Experimente'),
+                _Bullet('Inove'),
+                _Bullet('Decore'),
+                _Bullet('A realidade aumentada é isso e muito mais'),
               ],
             ],
           ),
@@ -298,7 +300,7 @@ class AboutScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 14),
-              _actionButton('Projetarr'),
+              _actionButton('Projetar'),
             ],
           ),
         ),
