@@ -235,30 +235,46 @@ class ModelsScreen extends StatelessWidget {
             itemCount: items.length,
             itemBuilder: (_, index) {
               final item = items[index];
-              return Container(
-                decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(22),
-                  gradient: const LinearGradient(
-                    colors: [Color(0xFF0D3B5A), Color(0xFF0B233D)],
-                    begin: Alignment.topLeft,
-                    end: Alignment.bottomRight,
-                  ),
-                  border: Border.all(color: const Color(0xFF4BC3FF).withOpacity(0.35)),
-                ),
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  children: [
-                    Icon(item.$2, color: const Color(0xFF8CE8FF), size: 46),
-                    const SizedBox(height: 12),
-                    Text(
-                      item.$1,
-                      style: const TextStyle(
-                        color: Colors.white,
-                        fontWeight: FontWeight.w700,
-                        fontSize: 20,
-                      ),
+              final isPlanta = item.$1 == 'Planta';
+
+              return GestureDetector(
+                onTap: isPlanta
+                    ? () {
+                        Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                            builder: (context) => const ProjectScreen(),
+                          ),
+                        );
+                      }
+                    : null,
+                child: Container(
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(22),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B5A), Color(0xFF0B233D)],
+                      begin: Alignment.topLeft,
+                      end: Alignment.bottomRight,
                     ),
-                  ],
+                    border: Border.all(
+                      color: const Color(0xFF4BC3FF).withOpacity(0.35),
+                    ),
+                  ),
+                  child: Column(
+                    mainAxisAlignment: MainAxisAlignment.center,
+                    children: [
+                      Icon(item.$2, color: const Color(0xFF8CE8FF), size: 46),
+                      const SizedBox(height: 12),
+                      Text(
+                        item.$1,
+                        style: const TextStyle(
+                          color: Colors.white,
+                          fontWeight: FontWeight.w700,
+                          fontSize: 20,
+                        ),
+                      ),
+                    ],
+                  ),
                 ),
               );
             },
