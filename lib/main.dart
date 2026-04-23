@@ -292,7 +292,7 @@ class AboutScreen extends StatelessWidget {
           child: const Padding(
             padding: EdgeInsets.all(12),
             child: Text(
-              'A DecorAR é uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '
+              'A DecorAR foi fundada em 2026, pelo grupo TeamTwo, uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '
               'Nosso objetivo é transformar a forma como as pessoas planejam e visualizam seus ambientes, permitindo '
               'que clientes vejam, em tempo real, móveis, cores e elementos decorativos no próprio espaço.\n\n'
               'Combinando tecnologia e criatividade, a DecorAR oferece uma experiência moderna e interativa. Nesta primeira '
@@ -303,8 +303,8 @@ class AboutScreen extends StatelessWidget {
               style: TextStyle(
                 color: Color(0xFFDCE9FF),
                 height: 1.5,
-                fontSize: 15,
-                fontWeight: FontWeight.w500,
+                fontSize: 17,
+                fontWeight: FontWeight.w400,
               ),
             ),
           ),
@@ -345,6 +345,48 @@ class AboutScreen extends StatelessWidget {
     );
   }
 }
+
+class ProjectScreen extends StatelessWidget {
+  const ProjectScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return ListView(
+      padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+      children: [
+        const Center(
+          child: Text(
+            'Projetar Modelo',
+            style: TextStyle(
+              color: Colors.white,
+              fontSize: 30,
+              fontWeight: FontWeight.w700,
+            ),
+          ),
+        ),
+        const SizedBox(height: 18),
+        _card(
+          child: const Padding(
+            padding: EdgeInsets.all(12),
+            child: Text(
+              'Aqui você pode visualizar e gerenciar seus projetos de decoração. '
+              'Explore ideias, salve inspirações e acompanhe o progresso das suas criações.\n\n'
+              'Nos próximos passos, será possível integrar modelos em RA diretamente nos ambientes, '
+              'permitindo uma experiência ainda mais imersiva e prática.',
+              style: TextStyle(
+                color: Color(0xFFDCE9FF),
+                height: 1.5,
+                fontSize: 17,
+                fontWeight: FontWeight.w400,
+              ),
+            ),
+          ),
+        ),
+      ],
+    );
+  }
+}
+
 
 class _Bullet extends StatelessWidget {
   final String text;
