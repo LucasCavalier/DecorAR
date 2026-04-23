@@ -155,8 +155,17 @@ class HomeScreen extends StatelessWidget {
                 _Bullet('Experimente'),
                 _Bullet('Inove'),
                 _Bullet('Decore'),
-                _Bullet('A realidade aumentada é isso e muito mais'),
               ],
+              const SizedBox(height: 20),
+              const Text(
+                'A realidade aumentada é tudo isso e muito mais',
+                style: TextStyle(
+                  color: Colors.white,
+                  fontSize: 28,
+                  fontWeight: FontWeight.bold,
+                  height: 1.1,
+                ),
+              ),
               const SizedBox(height: 20),
               const Text(
                 'A integração da Realidade Aumentada (RA) com a inovação tecnológica tem revolucionado a forma como pensamos a decoração de interiores. '
@@ -179,14 +188,6 @@ class HomeScreen extends StatelessWidget {
               ),
             ],
           ),
-        ),
-        const SizedBox(height: 18),
-        Row(
-          children: [
-            Expanded(child: _actionButton('Modelos')),
-            const SizedBox(width: 14),
-            Expanded(child: _actionButton('Sobre')),
-          ],
         ),
       ],
     );
