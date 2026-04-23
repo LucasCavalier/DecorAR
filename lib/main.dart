@@ -49,16 +49,32 @@ class _MainShellState extends State<MainShell> {
           borderRadius: BorderRadius.circular(20),
           border: Border.all(color: const Color(0xFF4A69A8).withOpacity(0.4)),
         ),
-        child: NavigationBar(
-          backgroundColor: Colors.transparent,
-          indicatorColor: const Color.fromARGB(255, 83, 128, 235).withOpacity(0.8),
-          selectedIndex: _index,
-          onDestinationSelected: (value) => setState(() => _index = value),
-          destinations: const [
-            NavigationDestination(icon: Icon(Icons.weekend), label: 'Modelos'),
-            NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
-            NavigationDestination(icon: Icon(Icons.info), label: 'Sobe'),
-          ],
+        child: NavigationBarTheme(
+          data: NavigationBarThemeData(
+            iconTheme: MaterialStateProperty.resolveWith((states) {
+              if (states.contains(MaterialState.selected)) {
+                return const IconThemeData(color: Colors.white);
+              }
+              return const IconThemeData(color: Colors.white70);
+            }),
+            labelTextStyle: MaterialStateProperty.resolveWith((states) {
+              if (states.contains(MaterialState.selected)) {
+                return const TextStyle(color: Colors.white);
+              }
+              return const TextStyle(color: Colors.white70);
+            }),
+          ),
+          child: NavigationBar(
+            backgroundColor: Colors.transparent,
+            indicatorColor: const Color.fromARGB(255, 83, 128, 235).withOpacity(0.8),
+            selectedIndex: _index,
+            onDestinationSelected: (value) => setState(() => _index = value),
+            destinations: const [
+              NavigationDestination(icon: Icon(Icons.weekend), label: 'Modelos'),
+              NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
+              NavigationDestination(icon: Icon(Icons.info), label: 'Sobre'),
+            ],
+          ),
         ),
       ),
     );
@@ -125,7 +141,7 @@ class HomeScreen extends StatelessWidget {
               ),
               const SizedBox(height: 20),
               const Text(
-                'Transforme seu\nespaço em segundos',
+                'Transforme seu espaço em segundos',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 34,
