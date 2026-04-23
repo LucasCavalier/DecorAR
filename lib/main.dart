@@ -298,7 +298,7 @@ class AboutScreen extends StatelessWidget {
                 ),
               ),
               const SizedBox(height: 14),
-              _actionButton('Visualizar'),
+              _actionButton('Projetar'),
             ],
           ),
         ),
