@@ -309,21 +309,6 @@ class AboutScreen extends StatelessWidget {
             ),
           ),
         ),
-        const SizedBox(height: 16),
-        _card(
-          child: Column(
-            children: [
-              const Text(
-                'Planta',
-                style: TextStyle(
-                  color: Color(0xFF73E3FF),
-                  fontWeight: FontWeight.bold,
-                  fontSize: 36,
-                ),
-              ),
-            ],
-          ),
-        ),
       ],
     );
   }
