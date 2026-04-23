@@ -159,18 +159,21 @@ class HomeScreen extends StatelessWidget {
               ],
               const SizedBox(height: 20),
               const Text(
-                'A DecorAR é uma empresa inovadora especializada em decoração de interiores com Realidade Aumentada (RA). '
-                'Nosso objetivo é transformar a forma como as pessoas planejam e visualizam seus ambientes, permitindo '
-                'que clientes vejam, em tempo real, móveis, cores e elementos decorativos no próprio espaço.\n\n'
-                'Combinando tecnologia e criatividade, a DecorAR oferece uma experiência moderna e interativa. Nesta primeira '
-                'versão do aplicativo, estamos focados na construção de uma interface elegante e intuitiva, pronta para receber '
-                'a integração de RA nas próximas etapas do projeto.\n\n'
-                'Nossa equipe acredita que cada ambiente deve refletir personalidade e conforto. Por isso, criamos um fluxo simples '
-                'para explorar modelos, conhecer inspirações e iniciar a jornada de decoração com praticidade e confiança.',
+                'A integração da Realidade Aumentada (RA) com a inovação tecnológica tem revolucionado a forma como pensamos a decoração de interiores. '
+                'Essa combinação permite projetar, em tempo real, elementos decorativos diretamente no ambiente físico, proporcionando uma visualização precisa e dinâmica das mudanças desejadas. '
+                'Com o uso de projeções avançadas, torna-se possível experimentar diferentes estilos, cores e mobiliários antes mesmo de qualquer alteração física.\n\n'
+
+                'Ao unir criatividade e tecnologia, essa abordagem transforma o processo de decoração em uma experiência interativa e altamente eficiente. '
+                'Usuários podem testar diversas composições visuais com facilidade, reduzindo incertezas e otimizando decisões. Além disso, a utilização da RA elimina a necessidade de suposições, '
+                'tornando o planejamento mais assertivo e alinhado às expectativas.\n\n'
+
+                'As vantagens são significativas: economia de tempo, redução de custos com erros de escolha e maior confiança no resultado final. '
+                'Essa inovação não apenas facilita o processo de decorar, mas também amplia as possibilidades criativas, permitindo que cada ambiente seja planejado de forma personalizada, '
+                'com precisão e praticidade.',
                 style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
-                  fontWeight: FontWeight.bold,
+                  fontWeight: FontWeight.w400,
                   height: 1.1,
                 ),
               ),
