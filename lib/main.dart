@@ -295,7 +295,7 @@ class ProjectScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF0D3B60),
         title: const Text(
-          'Projetar',
+          'Projetar Modelo',
           style: TextStyle(
             color: Colors.white, // título em branco
             fontWeight: FontWeight.w700,
