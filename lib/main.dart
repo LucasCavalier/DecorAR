@@ -295,16 +295,20 @@ class ProjectScreen extends StatelessWidget {
       appBar: AppBar(
         backgroundColor: const Color(0xFF0D3B60),
         title: const Text(
-          'Projetar Modelo',
+          'Projetar',
           style: TextStyle(
+            color: Colors.white, // título em branco
             fontWeight: FontWeight.w700,
             fontSize: 22,
           ),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.pop(context); // volta para a página anterior (ModelsScreen)
+            Navigator.pushReplacement(
+              context,
+              MaterialPageRoute(builder: (context) => const ModelsScreen()),
+            );
           },
         ),
       ),
@@ -329,8 +333,19 @@ class ProjectScreen extends StatelessWidget {
                     child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
                   ),
                 ),
+                const SizedBox(height: 12),
+                const Text(
+                  'Planta',
+                  style: TextStyle(
+                    color: Colors.white,
+                    fontSize: 30,
+                    fontWeight: FontWeight.w600,
+                  ),
+                ),
                 const SizedBox(height: 14),
-                _actionButton('Projetar'),
+                _actionButton(
+                  'Projetar',
+                ),
               ],
             ),
           ),
