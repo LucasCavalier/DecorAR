@@ -30,13 +30,13 @@ class MainShell extends StatefulWidget {
 }
 
 class _MainShellState extends State<MainShell> {
-  int _index = 1;
+  int _index = 0;
 
   @override
   Widget build(BuildContext context) {
     final pages = [
-      const ModelsScreen(),
       const HomeScreen(),
+      const ModelsScreen(),
       const AboutScreen(),
     ];
 
@@ -70,8 +70,8 @@ class _MainShellState extends State<MainShell> {
             selectedIndex: _index,
             onDestinationSelected: (value) => setState(() => _index = value),
             destinations: const [
-              NavigationDestination(icon: Icon(Icons.weekend), label: 'Modelos'),
               NavigationDestination(icon: Icon(Icons.home), label: 'Início'),
+              NavigationDestination(icon: Icon(Icons.weekend), label: 'Modelos'),
               NavigationDestination(icon: Icon(Icons.info), label: 'Sobre'),
             ],
           ),
@@ -305,10 +305,7 @@ class ProjectScreen extends StatelessWidget {
         leading: IconButton(
           icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
-            Navigator.pushReplacement(
-              context,
-              MaterialPageRoute(builder: (context) => const ModelsScreen()),
-            );
+            Navigator.pop(context);
           },
         ),
       ),
