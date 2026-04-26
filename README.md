@@ -9,7 +9,7 @@ Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de int
 - Tela inicial com hero, chamada principal e CTAs
 - Tela de modelos (grid de itens)
 - Tela sobre (texto institucional)
-- Card de detalhe com botão "Visualizar"
+- Tela projetar com botão "Projetar" do modelo escolhido
 - Navegação inferior entre as 3 áreas principais
 
 ## Como executar o projeto:
