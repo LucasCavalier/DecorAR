@@ -1,16 +1,18 @@
 # Aplicativo DecorAR (Flutter)
 
-Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de interiores inspirado na referência enviada.
+Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de interiores baseado no design enviado e compartilhado durante a reunião de abertura dos trabalhos.
+
+
 
 > Nesta etapa foi implementada somente a interface (UI). A integração de Realidade Aumentada ainda não foi adicionada.
 
 ## Telas implementadas
 
-- Tela inicial com hero, chamada principal e CTAs
-- Tela de modelos (grid de itens)
-- Tela sobre (texto institucional)
-- Tela projetar com botão "Projetar" do modelo escolhido
-- Navegação inferior entre as 3 áreas principais
+- Tela inicial com hero, chamada principal e CTAs;
+- Tela de modelos (grid de itens);
+- Tela sobre (texto institucional);
+- Tela projetar com botão "Projetar" do modelo escolhido;
+- Navegação inferior entre as 3 áreas principais.
 
 ## Como executar o projeto:
 
