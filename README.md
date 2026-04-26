@@ -2,7 +2,11 @@
 
 Protótipo visual em **Flutter + Dart** para um aplicativo de decoração de interiores baseado no design enviado e compartilhado durante a reunião de abertura dos trabalhos.
 
+O **DecorAR** é um aplicativo voltado para design de interiores que utiliza realidade aumentada para transformar a forma como as pessoas planejam e visualizam seus ambientes. A proposta do app é permitir que o usuário projete móveis e elementos de decoração diretamente no espaço real, usando a câmera do celular, facilitando decisões antes da compra ou reorganização do ambiente.
 
+A ideia do DecorAR surgiu da dificuldade comum enfrentada por muitas pessoas ao imaginar como um móvel ou objeto ficará em determinado espaço. Pensando nisso, o aplicativo foi desenvolvido para unir tecnologia e praticidade, oferecendo uma experiência interativa em que o usuário pode posicionar, ajustar e visualizar diferentes opções de mobília em tempo real.
+
+Com isso, o DecorAR não apenas simplifica o processo de decoração, mas também reduz erros, otimiza o tempo e proporciona maior segurança na escolha dos itens, tornando o design de interiores mais acessível, intuitivo e eficiente.
 
 > Nesta etapa foi implementada somente a interface (UI). A integração de Realidade Aumentada ainda não foi adicionada.
 
