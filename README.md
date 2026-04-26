@@ -10,7 +10,7 @@ A ideia do DecorAR surgiu da dificuldade comum enfrentada por muitas pessoas ao 
 
 Com isso, o DecorAR não apenas simplifica o processo de decoração, mas também reduz erros, otimiza o tempo e proporciona maior segurança na escolha dos itens, tornando o design de interiores mais acessível, intuitivo e eficiente.
 
-
+> O projeto será dividido em duas etapas, a primeira etapa e a segunda etapa, segue abaixo as demais informações das mesmas.
 
 > Até o fim da primeira etapa, que finda em (28/04/2026), será implementada somente a interface (UI). A integração de Realidade Aumentada será implementada na segunda etapa do projeto, que finda em (30/06/2026).
 
