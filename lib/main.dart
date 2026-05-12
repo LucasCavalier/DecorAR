@@ -297,7 +297,7 @@ class ProjectScreen extends StatelessWidget {
         title: const Text(
           'Projetar Modelo',
           style: TextStyle(
-            color: Colors.white, // título em branco
+            color: Colors.white,
             fontWeight: FontWeight.w700,
             fontSize: 22,
           ),
@@ -314,6 +314,7 @@ class ProjectScreen extends StatelessWidget {
         children: [
           _card(
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const SizedBox(height: 8),
                 Container(
@@ -327,19 +328,52 @@ class ProjectScreen extends StatelessWidget {
                     ),
                   ),
                   child: const Center(
-                    child: Icon(Icons.eco, color: Color(0xFF9CFF7C), size: 130),
+                    child: Icon(
+                      Icons.eco,
+                      color: Color(0xFF9CFF7C),
+                      size: 130,
+                    ),
                   ),
                 ),
                 const SizedBox(height: 12),
-                const Text(
-                  'Planta',
-                  style: TextStyle(
-                    color: Colors.white,
-                    fontSize: 30,
-                    fontWeight: FontWeight.w600,
+
+                // TÍTULO
+                const Center(
+                  child: Text(
+                    'Planta',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
                   ),
                 ),
-                const SizedBox(height: 14),
+
+                const SizedBox(height: 18),
+
+                // DESCRIÇÃO
+                const Text(
+                  'Modelo de planta em Realidade Aumentada inspirado '
+                  'na exuberância natural dos philodendrons tropicais. '
+                  'Apresenta folhas amplas, detalhadas e com textura '
+                  'realista, destacando nervuras marcantes e tons '
+                  'vibrantes de verde. O design combina estética '
+                  'orgânica com elementos modernos para aplicações '
+                  'decorativas e interativas em ambientes virtuais. '
+                  'Ideal para experiências imersivas em projetos de '
+                  'arquitetura, interiores, educação e visualização '
+                  'digital. Seu visual elegante transmite frescor, '
+                  'sofisticação e profundidade visual.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+
+                const SizedBox(height: 22),
+
                 _actionButton(
                   'Projetar',
                 ),
