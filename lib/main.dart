@@ -220,7 +220,7 @@ class ModelsScreen extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-        ),
+        )
         const SizedBox(height: 18),
         _card(
           child: GridView.builder(
