@@ -203,7 +203,7 @@ class ModelsScreen extends StatelessWidget {
       ('Espelho', Icons.circle_outlined),
       ('Estátua', Icons.account_balance),
       ('Luminária', Icons.lightbulb),
-      ('Planta', Icons.local_florist),
+      ('Planta', Icons.eco),
       ('Diamante', Icons.change_history),
       ('OVNI', Icons.blur_circular),
     ];
@@ -597,7 +597,7 @@ class PlantScreen extends StatelessWidget {
           ),
         ),
         leading: IconButton(
-          icon: const Icon(Icons.local_florist, color: Colors.white),
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
           onPressed: () {
             Navigator.pop(context); 
           },
