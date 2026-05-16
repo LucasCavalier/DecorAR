@@ -220,8 +220,10 @@ class ModelsScreen extends StatelessWidget {
               fontWeight: FontWeight.w700,
             ),
           ),
-        )
+        ),
+
         const SizedBox(height: 18),
+
         _card(
           child: GridView.builder(
             physics: const NeverScrollableScrollPhysics(),
@@ -233,21 +235,51 @@ class ModelsScreen extends StatelessWidget {
               childAspectRatio: 0.9,
             ),
             itemCount: items.length,
+
             itemBuilder: (_, index) {
               final item = items[index];
-              final isPlanta = item.$1 == 'Planta';
 
               return GestureDetector(
-                onTap: isPlanta
-                    ? () {
-                        Navigator.push(
-                          context,
-                          MaterialPageRoute(
-                            builder: (context) => const ProjectScreen(),
-                          ),
-                        );
-                      }
-                    : null,
+                onTap: () {
+                  Widget screen;
+
+                  switch (item.$1) {
+                    case 'Espelho':
+                      screen = const MirrorScreen();
+                      break;
+
+                    case 'Estátua':
+                      screen = const StatueScreen();
+                      break;
+
+                    case 'Luminária':
+                      screen = const LampScreen();
+                      break;
+
+                    case 'Planta':
+                      screen = const PlantScreen();
+                      break;
+
+                    case 'Diamante':
+                      screen = const DiamondScreen();
+                      break;
+
+                    case 'OVNI':
+                      screen = const UfoScreen();
+                      break;
+
+                    default:
+                      return;
+                  }
+
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                      builder: (context) => screen,
+                    ),
+                  );
+                },
+
                 child: Container(
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(22),
@@ -260,11 +292,18 @@ class ModelsScreen extends StatelessWidget {
                       color: const Color(0xFF4BC3FF).withOpacity(0.35),
                     ),
                   ),
+
                   child: Column(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Icon(item.$2, color: const Color(0xFF8CE8FF), size: 46),
+                      Icon(
+                        item.$2,
+                        color: const Color(0xFF8CE8FF),
+                        size: 46,
+                      ),
+
                       const SizedBox(height: 12),
+
                       Text(
                         item.$1,
                         style: const TextStyle(
@@ -285,8 +324,263 @@ class ModelsScreen extends StatelessWidget {
   }
 }
 
-class ProjectScreen extends StatelessWidget {
-  const ProjectScreen({super.key});
+class MirrorScreen extends StatelessWidget {
+  const MirrorScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(
+                      Icons.circle_outlined,
+                      color: Color(0xFF8CE8FF),
+                      size: 130,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Center(
+                  child: Text(
+                    'Espelho',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                const Text(
+                  'Modelo de espelho em Realidade Aumentada com '
+                  'acabamento moderno e superfície altamente reflexiva. '
+                  'Possui bordas minimalistas e design elegante, ideal '
+                  'para composições sofisticadas em ambientes virtuais. '
+                  'O objeto foi desenvolvido para aplicações em projetos '
+                  'de interiores, decoração digital e experiências '
+                  'imersivas, proporcionando profundidade visual e '
+                  'sensação de amplitude aos espaços.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+                const SizedBox(height: 22),
+                _actionButton('Projetar'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class StatueScreen extends StatelessWidget {
+  const StatueScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(
+                      Icons.account_balance,
+                      color: Color(0xFFFFD27A),
+                      size: 130,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Center(
+                  child: Text(
+                    'Estátua',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                const Text(
+                  'Modelo de estátua em Realidade Aumentada inspirado '
+                  'em esculturas clássicas e monumentos históricos. '
+                  'Apresenta detalhes refinados, textura semelhante '
+                  'à pedra esculpida e proporções realistas que '
+                  'transmitem imponência e sofisticação. Ideal para '
+                  'aplicações em ambientes culturais, museus virtuais, '
+                  'projetos arquitetônicos e experiências interativas '
+                  'voltadas à arte e ao patrimônio histórico.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+                const SizedBox(height: 22),
+                _actionButton('Projetar'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class LampScreen extends StatelessWidget {
+  const LampScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(
+                      Icons.lightbulb,
+                      color: Color(0xFFFFF176),
+                      size: 130,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Center(
+                  child: Text(
+                    'Luminária',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                const Text(
+                  'Modelo de luminária em Realidade Aumentada com '
+                  'design contemporâneo e iluminação suave. '
+                  'Desenvolvida para criar atmosferas aconchegantes '
+                  'e sofisticadas em ambientes virtuais, combina '
+                  'formas elegantes com materiais modernos e acabamento '
+                  'minimalista. Ideal para projetos de interiores, '
+                  'visualização arquitetônica e experiências digitais '
+                  'imersivas focadas em decoração e iluminação.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+                const SizedBox(height: 22),
+                _actionButton('Projetar'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class PlantScreen extends StatelessWidget {
+  const PlantScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -377,6 +671,174 @@ class ProjectScreen extends StatelessWidget {
                 _actionButton(
                   'Projetar',
                 ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class DiamondScreen extends StatelessWidget {
+  const DiamondScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(
+                      Icons.change_history,
+                      color: Color(0xFF8CE8FF),
+                      size: 130,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Center(
+                  child: Text(
+                    'Diamante',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                const Text(
+                  'Modelo de diamante em Realidade Aumentada com '
+                  'lapidação detalhada e brilho intenso. Possui '
+                  'superfícies facetadas que refletem luz de forma '
+                  'realista, criando efeitos visuais sofisticados e '
+                  'imersivos. Ideal para aplicações em joalheria '
+                  'digital, vitrines virtuais, experiências interativas '
+                  'e projetos de visualização tridimensional de luxo.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+                const SizedBox(height: 22),
+                _actionButton('Projetar'),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class UfoScreen extends StatelessWidget {
+  const UfoScreen({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      backgroundColor: const Color(0xFF0A1D35),
+      appBar: AppBar(
+        backgroundColor: const Color(0xFF0D3B60),
+        title: const Text(
+          'Projetar Modelo',
+          style: TextStyle(
+            color: Colors.white,
+            fontWeight: FontWeight.w700,
+            fontSize: 22,
+          ),
+        ),
+        leading: IconButton(
+          icon: const Icon(Icons.arrow_back, color: Colors.white),
+          onPressed: () => Navigator.pop(context),
+        ),
+      ),
+      body: ListView(
+        padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 16),
+        children: [
+          _card(
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                const SizedBox(height: 8),
+                Container(
+                  height: 220,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(18),
+                    gradient: const LinearGradient(
+                      colors: [Color(0xFF0D3B60), Color(0xFF0A1D35)],
+                    ),
+                  ),
+                  child: const Center(
+                    child: Icon(
+                      Icons.blur_circular,
+                      color: Color(0xFF9CFF7C),
+                      size: 130,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 12),
+                const Center(
+                  child: Text(
+                    'OVNI',
+                    style: TextStyle(
+                      color: Colors.white,
+                      fontSize: 30,
+                      fontWeight: FontWeight.w600,
+                    ),
+                  ),
+                ),
+                const SizedBox(height: 18),
+                const Text(
+                  'Modelo de OVNI em Realidade Aumentada inspirado '
+                  'em conceitos futuristas e ficção científica. '
+                  'Apresenta estrutura metálica detalhada, iluminação '
+                  'neon e design aerodinâmico com efeitos visuais '
+                  'imersivos. Ideal para experiências interativas, '
+                  'jogos, simulações espaciais e projetos digitais '
+                  'voltados à exploração criativa e tecnologia futurista.',
+                  textAlign: TextAlign.justify,
+                  style: TextStyle(
+                    color: Colors.white70,
+                    fontSize: 15,
+                    height: 1.6,
+                  ),
+                ),
+                const SizedBox(height: 22),
+                _actionButton('Projetar'),
               ],
             ),
           ),
