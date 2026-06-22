@@ -1,0 +1,31 @@
+name: decorar_ra
+description: Aplicativo DecorAR com leitura de QR Code como marcador e Realidade Aumentada para o modelo Planta.
+publish_to: 'none'
+
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.9.0
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^1.0.8
+  mobile_scanner: ^7.2.0
+  #permission_handler: ^12.0.3
+  permission_handler: 11.4.0
+  arcore_flutter_plus: ^1.0.2
+  vector_math: ^2.2.0
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^6.0.0
+
+flutter:
+  uses-material-design: true
+
+  assets:
+    - assets/marcador_decorar_planta.png
