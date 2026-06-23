@@ -58,4 +58,4 @@ flutter run
 - Lucas Raposo
 - João Batista
 - Victor Lopes
-Francesco Sireno
+- Francesco Sireno
