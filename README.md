@@ -48,3 +48,14 @@ flutter run
 - Integrar recurso de ARKit/ARCore por plugin Flutter
 - Substituir ícones por imagens/modelos reais do catálogo
 - Conectar backend para listar objetos e ambientes
+
+
+
+## Integrantes:
+
+Davi Augusto
+Gustavo Silvério
+Lucas Raposo
+João Batista
+Victor Lopes
+Francesco Sireno
