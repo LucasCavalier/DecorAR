@@ -53,9 +53,9 @@ flutter run
 
 ## Integrantes:
 
-Davi Augusto
-Gustavo Silvério
-Lucas Raposo
-João Batista
-Victor Lopes
+- Davi Augusto
+- Gustavo Silvério
+- Lucas Raposo
+- João Batista
+- Victor Lopes
 Francesco Sireno
